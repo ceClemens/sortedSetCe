@@ -2,7 +2,7 @@ package main.java.at.jku.ce;
 
 import java.util.UUID;
 
-public class DomainObject {
+public class DomainObject implements Comparable<DomainObject> {
 
 	private String uuid = UUID.randomUUID().toString();
 	private String name;
@@ -58,6 +58,13 @@ public class DomainObject {
 		} else {
 			return super.hashCode();
 		}
+	}
+
+	public int compareTo(DomainObject o) {
+		DomainObject domainObj = (DomainObject) o;
+		int domObjeComp = name.compareTo(domainObj.getName());
+		return ((domObjeComp == 0) ? uuid.compareTo(domainObj.getUuid())
+				: domObjeComp);
 	}
 
 }
