@@ -30,4 +30,9 @@ public class DomainObject {
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
+
+	public String toString() {
+		return "DomainObject [name=" + name + ", comment=" + comment
+				+ ", uuid=" + uuid + "]";
+	}
 }
