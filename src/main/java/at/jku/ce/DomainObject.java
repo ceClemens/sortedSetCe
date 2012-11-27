@@ -1,8 +1,10 @@
 package main.java.at.jku.ce;
 
+import java.util.UUID;
+
 public class DomainObject {
 
-	public String id;
+	public String id = UUID.randomUUID().toString();
 	private String name;
 
 	/**
