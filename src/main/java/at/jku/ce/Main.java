@@ -2,6 +2,7 @@ package main.java.at.jku.ce;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Main {
 
@@ -11,14 +12,14 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Set<DomainObject> objectSet = new HashSet<DomainObject>();
+		Set<DomainObject> objectSet = new TreeSet<DomainObject>(new DomainObjectComparator());
 		objectSet.add(new DomainObject("Helga", "Logausgabe 1"));
 		objectSet.add(new DomainObject("Walter", "Logausgabe 2"));
 		objectSet.add(new DomainObject("Hans", "Logausgabe 3"));
 		objectSet.add(new DomainObject("Paul", "Logausgabe 4"));
 		objectSet.add(new DomainObject("Claudia", "Logausgabe 5"));
 		for (DomainObject domainObject : objectSet) {
-			LOGGER.debug(domainObject.getUuid());
+			LOGGER.debug(domainObject.toString());
 		}
 	}
 
