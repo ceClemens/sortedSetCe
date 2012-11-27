@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public class DomainObject {
 
-	public String id = UUID.randomUUID().toString();
+	public String uuid= UUID.randomUUID().toString();
 	private String name;
 
 	/**
@@ -14,12 +14,12 @@ public class DomainObject {
 		super();
 	}
 
-	public DomainObject(String id) {
+	public DomainObject(String uuid) {
 		super();
-		this.id = id;
+		this.uuid = uuid;
 	}
 
-	public String getId() {
-		return id;
+	public String getUuid() {
+		return uuid;
 	}
 }
